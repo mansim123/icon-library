@@ -5,6 +5,8 @@ import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Searching } from "@/redux/features/search-slice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
+import { ModeToggle } from "@/components/ui/toggle-mode";
+
 
 export default function Search() {
   const [searchName, setSearchName] = useState("");
@@ -35,8 +37,9 @@ export default function Search() {
         />
       </div>
       <p className="py-6 text-[18px] text-center font-roboto-light">
-      Over 1000 icons created in various styles (pixel, line, filled and hand Drawn) This is to give user<br></br> a diverse rang of style they can use these for. 
+      Over 1000 icons created in various styles (pixel, line, filled and hand Drawn) This is to give user<br></br> a diverse range of style they can use these for. 
       </p>
+      <ModeToggle />
     </section>
   );
 }

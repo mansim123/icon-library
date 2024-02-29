@@ -1,7 +1,15 @@
-import { ModeToggle } from "@/components/ui/toggle-mode";
+"use client"
 import Image from "next/image";
+import { ShoppingBasketIcon } from "lucide-react";
+import { useAppSelector } from "@/redux/store";
+import { useEffect } from "react";
 
 export default function Nav() {
+
+  const checkoutNumber = useAppSelector(
+    (state) => state.checkOutSlice.value.checkOutField
+  );
+
   return (
     <section className="py-14 bg-secondary w-full">
       <div className="max-w-5xl sm:flex sm:flex-row items-center justify-between px-6 lg:px-0 m-auto">
@@ -23,8 +31,10 @@ export default function Nav() {
           />
           </a>
         </div>
-        <div>
-          <ModeToggle />
+        <div className="flex flex-row items-center gap-1">
+          
+          <ShoppingBasketIcon/>
+          <div className="p-1 bg-white rounded text-[0.8rem]">{checkoutNumber}</div>
         </div>
       </div>
     </section>
