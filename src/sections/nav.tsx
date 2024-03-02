@@ -34,7 +34,7 @@ export default function Nav() {
         <div className="flex flex-row items-center gap-1">
           
           <ShoppingBasketIcon/>
-          <div className="p-1 bg-white rounded text-[0.8rem]">{checkoutNumber}</div>
+          <div className="p-1 bg-white dark:bg-card rounded text-[0.8rem]">{checkoutNumber}</div>
         </div>
       </div>
     </section>
