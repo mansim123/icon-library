@@ -1,58 +1,34 @@
 [
   {
-    "name": "Burger Menu Circle",
+    "name": "Burger Menu Circle Outlined",
     "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
     "category": "outlined",
     "shape": "circle",
-    "theme": "dark"
+    "theme": "dark",
+    "id": 1
   },
   {
-    "name": "Burger Menu Circle",
+    "name": "Burger Menu Circle Outlined",
     "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
     "category": "outlined",
     "shape": "circle",
-    "theme": "light"
+    "theme": "light",
+    "id": 1
   },
   {
-    "name": "Burger Menu Circle",
+    "name": "Burger Menu Circle Filled",
     "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Filled.svg",
     "category": "filled",
     "shape": "circle",
-    "theme": "dark"
+    "theme": "dark",
+    "id": 2
   },
   {
-    "name": "Burger Menu Circle",
+    "name": "Burger Menu Circle Filled",
     "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
     "category": "filled",
     "shape": "circle",
-    "theme": "light"
-  },
-  {
-    "name": "Burger Menu Squared",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Squared_Outlined.svg",
-    "category": "outlined",
-    "shape": "square",
-    "theme": "dark"
-  },
-  {
-    "name": "Burger Menu Squared",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Squared_Outlined.svg",
-    "category": "outlined",
-    "shape": "square",
-    "theme": "light"
-  },
-  {
-    "name": "Burger Menu Squared",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Squared_Filled.svg",
-    "category": "filled",
-    "shape": "square",
-    "theme": "dark"
-  },
-  {
-    "name": "Burger Menu Squared",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Squared_Filled.svg",
-    "category": "filled",
-    "shape": "square",
-    "theme": "light"
+    "theme": "light",
+    "id": 2
   }
 ]

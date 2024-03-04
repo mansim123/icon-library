@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { useAppSelector } from "@/redux/store";
-import { saveAs } from "file-saver";
 import iconsData from "@/data/icons.json";
 import { CheckoutNumber } from "@/redux/features/checkout-slice";
 import { useDispatch } from "react-redux";
@@ -10,10 +9,12 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Toaster, toast } from "sonner";
+import {CheckoutSide} from "@/components/ui/checkoutSideMenu"
 
 interface Icon {
   name: string;
   src: string;
+  id: number; 
 }
 
 export default function Icons() {
@@ -25,27 +26,13 @@ export default function Icons() {
 
   const { theme } = useTheme();
   const [folderPath, setFolderPath] = useState("");
-  const [category, setCategory] = useState("outlined");
-  const [shape, setShape] = useState("square");
+  const [category, setCategory] = useState("all");
+  const [shape, setShape] = useState("all");
   const [checkoutNumber, setCheckoutNumber] = useState<number>(0);
 
   const [animationCode, setAnimationCode] = useState("opacity-0");
-  const [selectedIndices, setSelectedIndices] = useState<number[]>([]);
+  const [svgPaths, setSvgPaths] = useState<Icon[]>([]);
 
-  const [selectedStyle, setSelectedStyle] = useState("Outlined");
-  const [selectedContainer, setSelectedContainer] = useState("Squared");
-
-  const handleStyleChange = (value: string) => {
-    setSelectedStyle(value);
-    // Do something with the selected style value
-    console.log(selectedStyle);
-  };
-
-  const handleContainerChange = (value: string) => {
-    setSelectedContainer(value);
-    // Do something with the selected container value
-    console.log(selectedContainer);
-  };
 
   useEffect(() => {
     // Dispatch the action after the state has been updated
@@ -67,60 +54,77 @@ export default function Icons() {
     return () => clearTimeout(timeoutId);
   }, [theme]); // Only run this effect when the theme changes
 
-  // const handleDownload = async (imageUrl: string, iconName: string) => {
-  //   try {
-  //     // Fetch the image file
-  //     const response = await fetch(imageUrl);
-  //     const blob = await response.blob();
+  // Function to toggle selection
+  function toggleSelection(name: string, src: string, id: number) {
 
-  //     // Use file-saver to save the Blob as a file
-  //     saveAs(blob, `${iconName}.svg`);
-  //   } catch (error) {
-  //     console.error("Error downloading image:", error);
-  //   }
-  // };
+    const exists = svgPaths.some(item => item.id === id);
 
-  function toggleSelection(index: number) {
-    const wasSelected = selectedIndices.includes(index);
-    const newSelectedIndices = wasSelected
-      ? selectedIndices.filter((i) => i !== index)
-      : [...selectedIndices, index];
+    if (exists) {
+      console.log("Icon is already added.");
 
-    setSelectedIndices(newSelectedIndices);
+      toast("Icon has already been added to basket", {
+        description: "Go to checkout to view all items",
+        action: {
+          label: "Checkout",
+          onClick: () => {
+            console.log("Undo");
+          },
+        },
+      });
 
-    // Construct description based on selection state
-    const description = wasSelected
-      ? "Icon has been removed from basket"
-      : "Icon has been added to basket";
-
-    if (!wasSelected) {
-      setCheckoutNumber(checkoutNumber + 1);
-    } else {
-      setCheckoutNumber(checkoutNumber - 1);
+      return;
     }
 
-    // Run toast function with appropriate description
-    toast(description, {
+    // Update svgPaths state by adding the new item
+    setSvgPaths(prevState => [
+      ...prevState,
+      { name, src, id }
+    ]);
+  
+    // Increment checkoutNumber
+    setCheckoutNumber(prevCheckoutNumber => prevCheckoutNumber + 1);
+  
+    // Run toast function
+    toast("Icon has been added to basket", {
       description: "Go to checkout to view all items",
       action: {
         label: "Checkout",
         onClick: () => {
-          // Implement undo logic here if needed
           console.log("Undo");
         },
       },
     });
   }
 
-  // Function to generate dynamic Tailwind CSS classes based on index
-  function getButtonClasses(index: number) {
-    // Check if the index is selected
-    const isSelected = selectedIndices.includes(index);
-    // Return appropriate classes based on selection state
-    return `w-45 h-45 bg-secondary rounded-xl border border-secondary flex flex-col justify-center items-center p-4 ${
-      isSelected ? "inner-border-2 inner-border-blue-500" : "" // Add additional Tailwind classes for selected items
-    }`;
-  }
+
+  const removeItemFromSvgPaths = (idToRemove: number) => {
+    // Check if the item with the given id exists in svgPaths
+    const indexToRemove = svgPaths.findIndex(item => item.id === idToRemove);
+
+    toast("Icon has been remove from your basket", {
+      description: "Go to checkout to view all items",
+      action: {
+        label: "Checkout",
+        onClick: () => {
+          console.log("Undo");
+        },
+      },
+    });
+    
+    // If the item is found, remove it from svgPaths
+    if (indexToRemove !== -1) {
+      setSvgPaths(prevState => {
+        const newState = [...prevState];
+        newState.splice(indexToRemove, 1); // Remove the item at the found index
+        return newState;
+      });
+    
+      // Decrement checkoutNumber
+      setCheckoutNumber(prevCheckoutNumber => prevCheckoutNumber - 1);
+    }
+  };
+
+
 
   // Filter icons based on searchName
   // const filteredIcons = iconsData.filter((icon) =>
@@ -134,10 +138,19 @@ export default function Icons() {
   // Filter icons based on category when category changes
   useEffect(() => {
     const filtered = iconsData.filter((icon) => {
-      return icon.category === category && icon.shape === shape && icon.theme === folderPath;
+      if (category !== "all" && shape !== "all") {
+        return icon.category === category && icon.shape === shape && icon.theme === folderPath;
+      } else if (category !== "all") {
+        return icon.category === category && icon.theme === folderPath;
+      } else if (shape !== "all") {
+        return icon.shape === shape && icon.theme === folderPath;
+      } else {
+        return icon.theme === folderPath;
+      }
     });
     setFilteredIcons(filtered);
   }, [category, shape, folderPath]);
+
 
   const onCategoryChange = (value:string) => {
     setCategory(value);
@@ -154,8 +167,9 @@ export default function Icons() {
       <div className="flex item-center justify-center flex-row w-full pb-12">
         <div className="flex flex-row items-center gap-5">
           <h3 className="font-roboto-bold font-bold">Style</h3>
-          <Tabs defaultValue="Outlined" value={category} onValueChange={onCategoryChange} className="w-[400px]">
+          <Tabs defaultValue="all" value={category} onValueChange={onCategoryChange} className="w-[400px]">
             <TabsList>
+            <TabsTrigger value="all">All</TabsTrigger>
               <TabsTrigger value="outlined">Outlined</TabsTrigger>
               <TabsTrigger value="filled">Filled</TabsTrigger>
             </TabsList>
@@ -163,8 +177,9 @@ export default function Icons() {
         </div>
         <div className="flex flex-row items-center gap-5">
           <h3 className="font-roboto-bold font-bold">Container</h3>
-          <Tabs defaultValue="Squared" value={shape} onValueChange={onShapeChange} className="w-[400px]">
+          <Tabs defaultValue="all" value={shape} onValueChange={onShapeChange} className="w-[400px]">
             <TabsList>
+              <TabsTrigger value="all">All</TabsTrigger>
               <TabsTrigger value="square">Square</TabsTrigger>
               <TabsTrigger value="circle">Circle</TabsTrigger>
               <TabsTrigger value="rounded">Rounded</TabsTrigger>
@@ -178,18 +193,16 @@ export default function Icons() {
         {filteredIcons.map((icon, index) => (
           <button
             key={index}
-            className={getButtonClasses(index)}
-            onClick={() => toggleSelection(index)}
+            className="w-45 h-45 bg-secondary rounded-xl border border-secondary flex flex-col justify-center items-center p-4 hover:inner-border-2 focus:inner-border-2"
+            onClick={() => toggleSelection(icon.name , icon.src, icon.id)}
           >
             <Image src={icon.src} width={75} height={75} alt={icon.name}/>
-            <div className="flex-grow flex justify-center items-center">
-              
-            </div>
             <small className="text-center">{icon.name}</small>
           </button>
         ))}
       </div>
       <Toaster />
+      <CheckoutSide svgPaths={svgPaths} onRemoveItem={removeItemFromSvgPaths}/>
     </section>
   );
 }
