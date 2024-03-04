@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { ShoppingBasketIcon } from "lucide-react";
 import { useAppSelector } from "@/redux/store";
-import { useEffect } from "react";
 
 export default function Nav() {
 

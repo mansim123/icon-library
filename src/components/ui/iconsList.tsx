@@ -1,6 +1,5 @@
 // IconList.js
 import { useState } from "react";
-import { useAppSelector } from "@/redux/store";
 import Image from "next/image";
 import iconsData from "@/data/icons.json";
 

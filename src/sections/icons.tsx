@@ -18,9 +18,9 @@ interface Icon {
 }
 
 export default function Icons() {
-  const searchName = useAppSelector(
-    (state) => state.searchSlice.value.searchField
-  );
+  // const searchName = useAppSelector(
+  //   (state) => state.searchSlice.value.searchField
+  // );
 
   const dispatch = useDispatch<AppDispatch>();
 
