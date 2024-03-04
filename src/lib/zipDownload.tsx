@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { useRef, useImperativeHandle, forwardRef } from 'react';
 import JSZip from 'jszip';
 import axios from 'axios';
 import FileSaver from 'file-saver';
-import { Button } from '@/components/ui/button';
 
 interface SvgPath {
   name: string;
@@ -14,7 +13,14 @@ interface Props {
   svgPaths: SvgPath[];
 }
 
-const ZipDownloadComponent: React.FC<Props> = ({ svgPaths }) => {
+// Define the type of the exposed methods
+export interface ZipDownloadRef {
+  handleDownload: () => void;
+}
+
+// Use forwardRef to forward the ref to the functional component
+const ZipDownloadComponent: React.ForwardRefRenderFunction<ZipDownloadRef, Props> = ({ svgPaths }, ref) => {
+  // Define the handleDownload method
   const handleDownload = async () => {
     const zip = new JSZip();
     const promises: Promise<void>[] = [];
@@ -44,12 +50,13 @@ const ZipDownloadComponent: React.FC<Props> = ({ svgPaths }) => {
     });
   };
 
-  return (
-    <Button onClick={handleDownload} className="w-full" variant="outline">
-      SVG
-      <span className="text-sm">(original)</span>
-    </Button>
-  );
+  // Expose the handleDownload method using useImperativeHandle
+  useImperativeHandle(ref, () => ({
+    handleDownload,
+  }));
+
+  return null; // Return null since this component doesn't render anything
 };
 
-export default ZipDownloadComponent;
+// Forward the ref to the functional component
+export default forwardRef(ZipDownloadComponent);

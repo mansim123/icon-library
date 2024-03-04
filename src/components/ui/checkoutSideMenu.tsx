@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { Button } from "@/components/ui/button";
 import { ShoppingBasketIcon } from "lucide-react";
 import { useAppSelector } from "@/redux/store";
-import ZipDownloadComponent from "@/lib/zipDownload";
+import ZipDownloadComponent, { ZipDownloadRef } from "@/lib/zipDownload";
 
 interface Icon {
   name: string;
@@ -20,8 +20,8 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
     (state) => state.checkOutSlice.value.checkOutField
   );
 
-  // Ref for accessing methods of ZipDownloadComponent
-  const zipDownloaderRef = useRef<any>(null);
+  // Inside your CheckoutSide component
+  const zipDownloaderRef = useRef<ZipDownloadRef>(null);
 
   // Function to handle download button click
   const handleDownloadClick = () => {
@@ -70,7 +70,9 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
           {/* Pass svgPaths to ZipDownloadComponent */}
           <ZipDownloadComponent ref={zipDownloaderRef} svgPaths={svgPaths} />
           {/* Button to trigger download */}
-          
+          <Button onClick={handleDownloadClick} className="w-full" variant="outline">
+            SVG (Original)
+          </Button>
         </div>
       </div>
     </div>
