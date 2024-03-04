@@ -2,9 +2,10 @@
 import { useState, useEffect } from "react";
 // import { useAppSelector } from "@/redux/store";
 import iconsData from "@/data/icons.json";
-import { CheckoutNumber } from "@/redux/features/checkout-slice";
+import { CheckoutNumber, CheckoutToggle } from "@/redux/features/checkout-slice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
+import { useAppSelector } from "@/redux/store";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -67,7 +68,7 @@ export default function Icons() {
         action: {
           label: "Checkout",
           onClick: () => {
-            console.log("Undo");
+            toggleCheckout();
           },
         },
       });
@@ -90,7 +91,7 @@ export default function Icons() {
       action: {
         label: "Checkout",
         onClick: () => {
-          console.log("Undo");
+          toggleCheckout();
         },
       },
     });
@@ -106,7 +107,7 @@ export default function Icons() {
       action: {
         label: "Checkout",
         onClick: () => {
-          console.log("Undo");
+          toggleCheckout();
         },
       },
     });
@@ -125,6 +126,13 @@ export default function Icons() {
   };
 
 
+  const checkoutToggleField = useAppSelector(
+    (state) => state.checkOutSlice.value.checkoutToggleField
+  );
+
+  const toggleCheckout = () => {
+    dispatch(CheckoutToggle());
+  }
 
   // Filter icons based on searchName
   // const filteredIcons = iconsData.filter((icon) =>
