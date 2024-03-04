@@ -7,7 +7,7 @@ export const store = configureStore ({
 
     reducer: {
         searchSlice,
-        checkOutSlice
+        checkOutSlice,
     },
 
 })

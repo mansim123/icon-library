@@ -1,7 +1,11 @@
-import { useRef } from 'react';
+import { useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { ShoppingBasketIcon } from "lucide-react";
 import { useAppSelector } from "@/redux/store";
+import { AppDispatch } from "@/redux/store";
+import { CheckoutToggle } from "@/redux/features/checkout-slice";
+import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
 import ZipDownloadComponent, { ZipDownloadRef } from "@/lib/zipDownload";
 
 interface Icon {
@@ -20,6 +24,17 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
     (state) => state.checkOutSlice.value.checkOutField
   );
 
+  const dispatch = useDispatch<AppDispatch>();
+
+  const checkoutToggleField = useAppSelector(
+    (state) => state.checkOutSlice.value.checkoutToggleField
+  );
+
+  const toggleCheckout = () => {
+    dispatch(CheckoutToggle());
+  }
+
+
   // Inside your CheckoutSide component
   const zipDownloaderRef = useRef<ZipDownloadRef>(null);
 
@@ -32,17 +47,24 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
   };
 
   return (
-    <div className="h-screen w-[15vw] absolute top-0 right-0 flex items-start justify-end">
-      <div className="w-full max-w-sm h-full bg-gray-50 dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 flex flex-col">
+    <div className={`h-screen w-[15vw] absolute top-0 ${checkoutToggleField} flex items-start justify-end transition-all duration-600`}>
+      <div className="w-full max-w-[25rem] h-full bg-gray-50 dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 flex flex-col">
         <div className="p-4 flex items-center justify-between">
-          <h2 className="text-lg font-semibold">Checkout</h2>
-          <ShoppingBasketIcon />
-          <div className="p-1 bg-white dark:bg-card rounded text-[0.8rem]">
-            {checkoutNumber}
+          <div className="flex items-center gap-2">
+            {" "}
+            {/* Wrap contents in a flex container */}
+            <h2 className="text-lg font-semibold mr-2">Checkout</h2>{" "}
+            {/* Add margin to create space between text and icon */}
+            <ShoppingBasketIcon />
+            <div className="p-1 bg-white dark:bg-card rounded text-[0.8rem]">
+              {checkoutNumber}
+            </div>
           </div>
-          <Button size="icon" variant="ghost">
-            X<span className="sr-only">Close</span>
-          </Button>
+          <div>
+            <Button onClick={() => toggleCheckout()} size="icon" variant="ghost">
+              X<span className="sr-only">Close</span>
+            </Button>
+          </div>
         </div>
         <div className="border-t py-2 border-gray-200 dark:border-gray-800 overflow-auto grid gap-px">
           {/* Map over svgPaths and render icons */}
@@ -70,7 +92,11 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
           {/* Pass svgPaths to ZipDownloadComponent */}
           <ZipDownloadComponent ref={zipDownloaderRef} svgPaths={svgPaths} />
           {/* Button to trigger download */}
-          <Button onClick={handleDownloadClick} className="w-full" variant="outline">
+          <Button
+            onClick={handleDownloadClick}
+            className="w-full"
+            variant="outline"
+          >
             SVG (Original)
           </Button>
         </div>

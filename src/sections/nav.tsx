@@ -2,12 +2,32 @@
 import Image from "next/image";
 import { ShoppingBasketIcon } from "lucide-react";
 import { useAppSelector } from "@/redux/store";
+import { AppDispatch } from "@/redux/store";
+import { CheckoutToggle } from "@/redux/features/checkout-slice";
+import { useDispatch } from "react-redux";
+import { useEffect, useState } from "react";
+
 
 export default function Nav() {
 
   const checkoutNumber = useAppSelector(
     (state) => state.checkOutSlice.value.checkOutField
   );
+
+  const dispatch = useDispatch<AppDispatch>();
+
+  const checkoutToggleField = useAppSelector(
+    (state) => state.checkOutSlice.value.checkoutToggleField
+  );
+
+  const toggleCheckout = () => {
+    dispatch(CheckoutToggle());
+  }
+
+  // useEffect(() => {
+  //   // Dispatch the action after the state has been updated
+  //   dispatch(CheckoutNumber(checkoutNumber));
+  // }, [checkoutNumber, dispatch]);
 
   return (
     <section className="py-14 bg-secondary w-full">
@@ -32,7 +52,7 @@ export default function Nav() {
         </div>
         <div className="flex flex-row items-center gap-1">
           
-          <ShoppingBasketIcon/>
+          <ShoppingBasketIcon className="cursor-pointer" onClick={() => toggleCheckout()}/>
           <div className="p-1 bg-white dark:bg-card rounded text-[0.8rem]">{checkoutNumber}</div>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 // Define the state types
 type CheckoutState = {
   checkOutField: number;
+  checkoutToggleField: string;
 };
 
 type InitialState = {
@@ -13,6 +14,7 @@ type InitialState = {
 const initialState: InitialState = {
   value: {
     checkOutField: 0,
+    checkoutToggleField: "right-[-25rem]",
   },
 };
 
@@ -24,11 +26,14 @@ export const checkOutSlice = createSlice({
     CheckoutNumber: (state, action: PayloadAction<number>) => {
       state.value.checkOutField = action.payload;
     },
+    CheckoutToggle: (state) => {
+      state.value.checkoutToggleField = state.value.checkoutToggleField === "right-[-25rem]" ? "right-[0rem]" : "right-[-25rem]";
+    },
   },
 });
 
 // Export action creators
-export const { CheckoutNumber } = checkOutSlice.actions;
+export const { CheckoutNumber, CheckoutToggle } = checkOutSlice.actions;
 
 // Export the reducer
 export default checkOutSlice.reducer;

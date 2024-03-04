@@ -21,7 +21,15 @@ export interface ZipDownloadRef {
 // Use forwardRef to forward the ref to the functional component
 const ZipDownloadComponent: React.ForwardRefRenderFunction<ZipDownloadRef, Props> = ({ svgPaths }, ref) => {
   // Define the handleDownload method
+
+  
   const handleDownload = async () => {
+
+    if(svgPaths.length === 0){
+      console.log("no items in basket")
+      return
+    }
+
     const zip = new JSZip();
     const promises: Promise<void>[] = [];
 

@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Toaster, toast } from "sonner";
-import {CheckoutSide} from "@/components/ui/checkoutSideMenu"
+import {CheckoutSide} from "@/sections/checkoutSideMenu"
 
 interface Icon {
   name: string;
