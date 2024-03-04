@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useAppSelector } from "@/redux/store";
+// import { useAppSelector } from "@/redux/store";
 import iconsData from "@/data/icons.json";
 import { CheckoutNumber } from "@/redux/features/checkout-slice";
 import { useDispatch } from "react-redux";
