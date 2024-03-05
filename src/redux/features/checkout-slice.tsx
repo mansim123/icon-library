@@ -28,6 +28,14 @@ export const checkOutSlice = createSlice({
     },
     CheckoutToggle: (state) => {
       state.value.checkoutToggleField = state.value.checkoutToggleField === "right-[-25rem]" ? "right-[0rem]" : "right-[-25rem]";
+      
+      // Smooth scroll to the top of the page when toggling to "right-[0rem]"
+      if (state.value.checkoutToggleField === "right-[0rem]") {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      }
     },
   },
 });
