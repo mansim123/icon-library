@@ -47,8 +47,8 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
   };
 
   return (
-    <div className={`h-screen w-[15vw] absolute top-0 ${checkoutToggleField} flex items-start justify-end transition-all duration-600`}>
-      <div className="w-full max-w-[25rem] h-full bg-gray-50 dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 flex flex-col">
+    <div className={`h-screen absolute top-0 ${checkoutToggleField} flex items-start justify-end transition-all duration-600`}>
+      <div className="w-[20rem] max-w-[50rem] h-full bg-gray-50 dark:bg-gray-900 border-l border-gray-200 dark:border-gray-800 flex flex-col">
         <div className="p-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
             {" "}
