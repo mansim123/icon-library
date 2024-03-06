@@ -10,8 +10,10 @@ import ZipDownloadComponent, { ZipDownloadRef } from "@/lib/zipDownload";
 
 interface Icon {
   name: string;
-  src: string;
+  srcDark: string;
+  srcLight: string;
   id: number;
+  svg: string;
 }
 
 interface Props {
@@ -68,10 +70,13 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
         </div>
         <div className="border-t py-2 border-gray-200 dark:border-gray-800 overflow-auto grid gap-px">
           {/* Map over svgPaths and render icons */}
-          {svgPaths.map(({ name, src, id }) => (
+          {svgPaths.map(({ name, id, svg }) => (
             <div key={id} className="p-4 flex items-center justify-between">
               {/* Assuming src contains the path to the SVG */}
-              <img src={src} alt="icon" className="w-12 h-12 mr-2" />
+
+              <div className="w-12 h-12">
+              <div dangerouslySetInnerHTML={{ __html: svg }} />
+            </div>
               {/* Display name as icon name */}
               <span>{name}</span>
               {/* X button to remove item */}

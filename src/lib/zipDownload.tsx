@@ -5,7 +5,8 @@ import FileSaver from 'file-saver';
 
 interface SvgPath {
   name: string;
-  src: string;
+  srcDark: string;
+  srcLight: string;
   id: number;
 }
 
@@ -24,36 +25,41 @@ const ZipDownloadComponent: React.ForwardRefRenderFunction<ZipDownloadRef, Props
 
   
   const handleDownload = async () => {
-
-    if(svgPaths.length === 0){
-      console.log("no items in basket")
-      return
+    if (svgPaths.length === 0) {
+      console.log("No items in basket");
+      return;
     }
-
+  
     const zip = new JSZip();
     const promises: Promise<void>[] = [];
-
-    // Iterate over each SVG path object
+  
     svgPaths.forEach((svgPath) => {
-      // Fetch SVG content
-      const promise = axios.get(svgPath.src, { responseType: 'blob' })
+      // Fetch dark mode SVG
+      const darkPromise = axios.get(svgPath.srcDark, { responseType: 'blob' })
         .then((response) => {
-          // Add SVG file to the zip
-          zip.file(`${svgPath.name}.svg`, response.data);
+          zip.file(`${svgPath.name}_light.svg`, response.data);
         })
         .catch((error) => {
-          console.error('Error fetching SVG:', error);
+          console.error('Error fetching dark mode SVG:', error);
         });
-
-      promises.push(promise);
+  
+      promises.push(darkPromise);
+  
+      // Fetch light mode SVG
+      const lightPromise = axios.get(svgPath.srcLight, { responseType: 'blob' })
+        .then((response) => {
+          zip.file(`${svgPath.name}_dark.svg`, response.data);
+        })
+        .catch((error) => {
+          console.error('Error fetching light mode SVG:', error);
+        });
+  
+      promises.push(lightPromise);
     });
-
-    // Wait for all SVGs to be fetched and added to the zip
+  
     await Promise.all(promises);
-
-    // Generate the zip file asynchronously
+  
     zip.generateAsync({ type: 'blob' }).then((content) => {
-      // Save the zip file using FileSaver.js
       FileSaver.saveAs(content, 'svg_files.zip');
     });
   };

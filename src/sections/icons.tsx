@@ -9,7 +9,6 @@ import {
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
 import { useAppSelector } from "@/redux/store";
-import Image from "next/image";
 import { useTheme } from "next-themes";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Toaster, toast } from "sonner";
@@ -17,8 +16,10 @@ import { CheckoutSide } from "@/sections/checkoutSideMenu";
 
 interface Icon {
   name: string;
-  src: string;
+  srcLight: string;
+  srcDark: string;
   id: number;
+  svg: string;
 }
 
 export default function Icons() {
@@ -42,11 +43,20 @@ export default function Icons() {
     dispatch(CheckoutNumber(checkoutNumber));
   }, [checkoutNumber, dispatch]);
 
+
+  const changeSVGColor = (color:string) => {
+    const styleElement = document.createElement('style');
+    styleElement.innerHTML = `.custom-svg { fill: ${color} !important; }`;
+    document.head.appendChild(styleElement);
+  };
+
   useEffect(() => {
     if (theme === "dark") {
       setFolderPath("dark");
+      changeSVGColor("#ffffff");
     } else {
       setFolderPath("light");
+      changeSVGColor("#000000");
     }
 
     const timeoutId = setTimeout(() => {
@@ -58,7 +68,7 @@ export default function Icons() {
   }, [theme]); // Only run this effect when the theme changes
 
   // Function to toggle selection
-  function toggleSelection(name: string, src: string, id: number) {
+  function toggleSelection(name: string, id: number, svg: string, srcLight: string, srcDark: string) {
     const exists = svgPaths.some((item) => item.id === id);
 
     if (exists) {
@@ -78,7 +88,7 @@ export default function Icons() {
     }
 
     // Update svgPaths state by adding the new item
-    setSvgPaths((prevState) => [...prevState, { name, src, id }]);
+    setSvgPaths((prevState) => [...prevState, { name, id, svg, srcLight, srcDark }]);
 
     // Increment checkoutNumber
     setCheckoutNumber((prevCheckoutNumber) => prevCheckoutNumber + 1);
@@ -122,9 +132,9 @@ export default function Icons() {
     }
   };
 
-  const checkoutToggleField = useAppSelector(
-    (state) => state.checkOutSlice.value.checkoutToggleField
-  );
+  // const checkoutToggleField = useAppSelector(
+  //   (state) => state.checkOutSlice.value.checkoutToggleField
+  // );
 
   const toggleCheckout = () => {
     dispatch(CheckoutToggle());
@@ -143,21 +153,17 @@ export default function Icons() {
   useEffect(() => {
     const filtered = iconsData.filter((icon) => {
       if (category !== "all" && shape !== "all") {
-        return (
-          icon.category === category &&
-          icon.shape === shape &&
-          icon.theme === folderPath
-        );
+        return icon.category === category && icon.shape === shape;
       } else if (category !== "all") {
-        return icon.category === category && icon.theme === folderPath;
+        return icon.category === category;
       } else if (shape !== "all") {
-        return icon.shape === shape && icon.theme === folderPath;
+        return icon.shape === shape;
       } else {
-        return icon.theme === folderPath;
+        return true; // Return true to include all icons if no filters are applied
       }
     });
     setFilteredIcons(filtered);
-  }, [category, shape, folderPath]);
+  }, [category, shape]);
 
   const onCategoryChange = (value: string) => {
     setCategory(value);
@@ -212,11 +218,15 @@ export default function Icons() {
           <button
             key={index}
             className="p-4 bg-secondary rounded-xl border border-secondary flex flex-col justify-center items-center hover:inner-border-2 focus:inner-border-2"
-            onClick={() => toggleSelection(icon.name, icon.src, icon.id)}
+            onClick={() => toggleSelection(icon.name, icon.id, icon.svg, icon.srcDark, icon.srcLight)}
             style={{ minWidth: "8rem", minHeight: "8rem" }}
           >
-            <Image src={icon.src} width={75} height={75} alt={icon.name} />
+            <div className="w-[75px] h-[75px]">
+              <div dangerouslySetInnerHTML={{ __html: icon.svg }} />
+            </div>
+            {/* <Image src={icon.src} width={75} height={75} alt={icon.name} /> */}
             <small className="text-center">{icon.name}</small>
+            
           </button>
         ))}
       </div>

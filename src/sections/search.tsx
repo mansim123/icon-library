@@ -5,7 +5,6 @@ import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Searching } from "@/redux/features/search-slice";
 import { useDispatch } from "react-redux";
 import { AppDispatch } from "@/redux/store";
-import { ModeToggle } from "@/components/ui/toggle-mode";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useTheme } from "next-themes";
 

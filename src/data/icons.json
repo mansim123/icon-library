@@ -1,202 +1,21 @@
 [
   {
     "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
     "category": "outlined",
     "shape": "circle",
-    "theme": "dark",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><defs></defs><path d=\"M80 82.5h40a2.5 2.5 0 0 0 0-5H80a2.5 2.5 0 0 0 0 5M80 122.5h40a2.5 2.5 0 0 0 0-5H80a2.5 2.5 0 0 0 0 5M80 102.5h40a2.5 2.5 0 0 0 0-5H80a2.5 2.5 0 0 0 0 5\" class=\"custom-svg\"/><path d=\"M100 55c24.81 0 45 20.19 45 45s-20.19 45-45 45-45-20.19-45-45 20.19-45 45-45m0-5c-27.61 0-50 22.39-50 50s22.39 50 50 50 50-22.39 50-50-22.39-50-50-50Z\" class=\"custom-svg\"/></svg>",
     "id": 1
   },
+
   {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
+    "name": "Burger Menu Circle Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
     "category": "outlined",
     "shape": "circle",
-    "theme": "light",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "light",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "light",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "light",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "light",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "light",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "light",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "light",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "light",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "light",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Outlined",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "theme": "light",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "dark",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "light",
-    "id": 2
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "src": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Filled.svg",
-    "category": "filled",
-    "shape": "circle",
-    "theme": "light",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><path d=\"M100 50c-27.61 0-50 22.39-50 50s22.39 50 50 50 50-22.39 50-50-22.39-50-50-50Zm20 72.5H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Zm0-20H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Zm0-20H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Z\" style=\"fill: #010326; stroke-width: 0;\" class=\"custom-svg\" /></svg>",
     "id": 2
   }
 ]

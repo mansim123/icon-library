@@ -59,3 +59,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.custom-svg {
+  fill: #ffffff!important; /* Change this to the desired fill color */
+}
