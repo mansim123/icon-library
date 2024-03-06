@@ -13,7 +13,7 @@
     "name": "Burger Menu Circle Filled",
     "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
+    "category": "filled",
     "shape": "circle",
     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><path d=\"M100 50c-27.61 0-50 22.39-50 50s22.39 50 50 50 50-22.39 50-50-22.39-50-50-50Zm20 72.5H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Zm0-20H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Zm0-20H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Z\" style=\"fill: #010326; stroke-width: 0;\" class=\"custom-svg\" /></svg>",
     "id": 2
