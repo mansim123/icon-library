@@ -173,7 +173,7 @@ useEffect(() => {
   };
 
   return (
-    <section className="py-14 w-full h-[50vw]">
+    <section className="py-14 w-full h-full pb-[20rem]">
       <div className="flex item-center justify-center flex-row flex-wrap w-full gap-5 md:gap-10 pb-12 px-6">
         <div className="flex flex-row items-center gap-2 sm:gap-5">
           <h3 className="font-roboto-bold font-bold">Style</h3>
@@ -203,7 +203,6 @@ useEffect(() => {
               <TabsTrigger value="all">All</TabsTrigger>
               <TabsTrigger value="square">Square</TabsTrigger>
               <TabsTrigger value="circle">Circle</TabsTrigger>
-              <TabsTrigger value="rounded">Rounded</TabsTrigger>
               <TabsTrigger value="misc">Misc</TabsTrigger>
             </TabsList>
           </Tabs>
