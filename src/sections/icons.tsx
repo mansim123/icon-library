@@ -23,14 +23,13 @@ interface Icon {
 }
 
 export default function Icons() {
-  // const searchName = useAppSelector(
-  //   (state) => state.searchSlice.value.searchField
-  // );
+  const searchName = useAppSelector(
+    (state) => state.searchSlice.value.searchField
+  );
 
   const dispatch = useDispatch<AppDispatch>();
 
   const { theme } = useTheme();
-  const [folderPath, setFolderPath] = useState("");
   const [category, setCategory] = useState("all");
   const [shape, setShape] = useState("all");
   const [checkoutNumber, setCheckoutNumber] = useState<number>(0);
@@ -46,16 +45,14 @@ export default function Icons() {
 
   const changeSVGColor = (color:string) => {
     const styleElement = document.createElement('style');
-    styleElement.innerHTML = `.custom-svg { fill: ${color} !important; }`;
+    styleElement.innerHTML = `.custom-svg { fill: ${color} !important; stroke: ${color} !important;  }`;
     document.head.appendChild(styleElement);
   };
 
   useEffect(() => {
     if (theme === "dark") {
-      setFolderPath("dark");
       changeSVGColor("#ffffff");
     } else {
-      setFolderPath("light");
       changeSVGColor("#000000");
     }
 
@@ -140,6 +137,8 @@ export default function Icons() {
     dispatch(CheckoutToggle());
   };
 
+  const [filteredIcons, setFilteredIcons] = useState<typeof iconsData>([]);
+
   // Filter icons based on searchName
   // const filteredIcons = iconsData.filter((icon) =>
   //   icon.name.toLowerCase().includes(searchName.toLowerCase())
@@ -147,23 +146,21 @@ export default function Icons() {
 
   // Define state for category and filteredIcons
 
-  const [filteredIcons, setFilteredIcons] = useState<typeof iconsData>([]);
+  
 
   // Filter icons based on category when category changes
-  useEffect(() => {
-    const filtered = iconsData.filter((icon) => {
-      if (category !== "all" && shape !== "all") {
-        return icon.category === category && icon.shape === shape;
-      } else if (category !== "all") {
-        return icon.category === category;
-      } else if (shape !== "all") {
-        return icon.shape === shape;
-      } else {
-        return true; // Return true to include all icons if no filters are applied
-      }
-    });
-    setFilteredIcons(filtered);
-  }, [category, shape]);
+  // Filter icons based on category, shape, and searchName
+useEffect(() => {
+  const filtered = iconsData.filter((icon) => {
+    const matchesCategory = category === "all" || icon.category === category;
+    const matchesShape = shape === "all" || icon.shape === shape;
+    const matchesSearch = icon.name.toLowerCase().includes(searchName.toLowerCase());
+
+    return matchesCategory && matchesShape && matchesSearch;
+  });
+
+  setFilteredIcons(filtered);
+}, [category, shape, searchName]);
 
   const onCategoryChange = (value: string) => {
     setCategory(value);
@@ -176,7 +173,7 @@ export default function Icons() {
   };
 
   return (
-    <section className="py-14 w-full">
+    <section className="py-14 w-full h-[50vw]">
       <div className="flex item-center justify-center flex-row flex-wrap w-full gap-5 md:gap-10 pb-12 px-6">
         <div className="flex flex-row items-center gap-2 sm:gap-5">
           <h3 className="font-roboto-bold font-bold">Style</h3>
@@ -190,6 +187,7 @@ export default function Icons() {
               <TabsTrigger value="all">All</TabsTrigger>
               <TabsTrigger value="outlined">Outlined</TabsTrigger>
               <TabsTrigger value="filled">Filled</TabsTrigger>
+              <TabsTrigger value="misc">Misc</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>
@@ -206,6 +204,7 @@ export default function Icons() {
               <TabsTrigger value="square">Square</TabsTrigger>
               <TabsTrigger value="circle">Circle</TabsTrigger>
               <TabsTrigger value="rounded">Rounded</TabsTrigger>
+              <TabsTrigger value="misc">Misc</TabsTrigger>
             </TabsList>
           </Tabs>
         </div>

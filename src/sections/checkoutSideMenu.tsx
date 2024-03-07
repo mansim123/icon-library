@@ -78,11 +78,11 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
               <div dangerouslySetInnerHTML={{ __html: svg }} />
             </div>
               {/* Display name as icon name */}
-              <span>{name}</span>
+              <small>{name}</small>
               {/* X button to remove item */}
               <button
                 onClick={() => onRemoveItem(id)}
-                className="text-black rounded-full w-6 h-6 flex items-center justify-center"
+                className="text-primary rounded-full w-6 h-6 flex items-center justify-center"
               >
                 X
               </button>
