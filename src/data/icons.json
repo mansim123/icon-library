@@ -79,6 +79,14 @@
     "shape": "misc",
     "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M1 1H11 M1 9H11 M1 5H7\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
     "id": 9
+  },
+  {
+    "name": "Testing new logo",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Test.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Test.svg",
+    "category": "misc",
+    "shape": "misc",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs><style>.cls-1{}</style></defs><path d=\"M50.67 70h139.33M50.67 120.01h139.33M50.67 170h139.33\" class=\"custom-svg-new\"/></svg>",
+    "id": 10
   }
-  
 ]

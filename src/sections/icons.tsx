@@ -42,19 +42,18 @@ export default function Icons() {
     dispatch(CheckoutNumber(checkoutNumber));
   }, [checkoutNumber, dispatch]);
 
-
-  const changeSVGColor = (color:string) => {
-    const styleElement = document.createElement('style');
+  const changeSVGColor = (color: string) => {
+    const styleElement = document.createElement("style");
+    const styleElement2 = document.createElement("style");
     styleElement.innerHTML = `.custom-svg { fill: ${color} !important; stroke: ${color} !important;  }`;
+    styleElement2.innerHTML = `.custom-svg-new { fill: ${color} !important; stroke: ${color} !important;  }`;
     document.head.appendChild(styleElement);
+    document.head.appendChild(styleElement2);
   };
 
   useEffect(() => {
-    if (theme === "dark") {
-      changeSVGColor("#ffffff");
-    } else {
-      changeSVGColor("#000000");
-    }
+    const color = theme === "dark" ? "#ffffff" : "#000000";
+    changeSVGColor(color);
 
     const timeoutId = setTimeout(() => {
       setAnimationCode("transition duration-200 opacity-1");
@@ -65,7 +64,13 @@ export default function Icons() {
   }, [theme]); // Only run this effect when the theme changes
 
   // Function to toggle selection
-  function toggleSelection(name: string, id: number, svg: string, srcLight: string, srcDark: string) {
+  function toggleSelection(
+    name: string,
+    id: number,
+    svg: string,
+    srcLight: string,
+    srcDark: string
+  ) {
     const exists = svgPaths.some((item) => item.id === id);
 
     if (exists) {
@@ -85,7 +90,10 @@ export default function Icons() {
     }
 
     // Update svgPaths state by adding the new item
-    setSvgPaths((prevState) => [...prevState, { name, id, svg, srcLight, srcDark }]);
+    setSvgPaths((prevState) => [
+      ...prevState,
+      { name, id, svg, srcLight, srcDark },
+    ]);
 
     // Increment checkoutNumber
     setCheckoutNumber((prevCheckoutNumber) => prevCheckoutNumber + 1);
@@ -139,28 +147,21 @@ export default function Icons() {
 
   const [filteredIcons, setFilteredIcons] = useState<typeof iconsData>([]);
 
-  // Filter icons based on searchName
-  // const filteredIcons = iconsData.filter((icon) =>
-  //   icon.name.toLowerCase().includes(searchName.toLowerCase())
-  // );
-
-  // Define state for category and filteredIcons
-
-  
-
   // Filter icons based on category when category changes
   // Filter icons based on category, shape, and searchName
-useEffect(() => {
-  const filtered = iconsData.filter((icon) => {
-    const matchesCategory = category === "all" || icon.category === category;
-    const matchesShape = shape === "all" || icon.shape === shape;
-    const matchesSearch = icon.name.toLowerCase().includes(searchName.toLowerCase());
+  useEffect(() => {
+    const filtered = iconsData.filter((icon) => {
+      const matchesCategory = category === "all" || icon.category === category;
+      const matchesShape = shape === "all" || icon.shape === shape;
+      const matchesSearch = icon.name
+        .toLowerCase()
+        .includes(searchName.toLowerCase());
 
-    return matchesCategory && matchesShape && matchesSearch;
-  });
+      return matchesCategory && matchesShape && matchesSearch;
+    });
 
-  setFilteredIcons(filtered);
-}, [category, shape, searchName]);
+    setFilteredIcons(filtered);
+  }, [category, shape, searchName]);
 
   const onCategoryChange = (value: string) => {
     setCategory(value);
@@ -209,25 +210,32 @@ useEffect(() => {
         </div>
       </div>
       <div className="max-w-5xl mx-auto">
-      <div
-        className={`grid px-6 grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4 ${animationCode}`}
-      >
-        {filteredIcons.map((icon, index) => (
-          <button
-            key={index}
-            className="p-4 bg-secondary rounded-xl border border-secondary flex flex-col justify-center items-center hover:inner-border-2 focus:inner-border-2"
-            onClick={() => toggleSelection(icon.name, icon.id, icon.svg, icon.srcDark, icon.srcLight)}
-            style={{ minWidth: "8rem", minHeight: "8rem" }}
-          >
-            <div className="w-[75px] h-[75px]">
-              <div dangerouslySetInnerHTML={{ __html: icon.svg }} />
-            </div>
-            {/* <Image src={icon.src} width={75} height={75} alt={icon.name} /> */}
-            <small className="text-center">{icon.name}</small>
-            
-          </button>
-        ))}
-      </div>
+        <div
+          className={`grid px-6 grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4 ${animationCode}`}
+        >
+          {filteredIcons.map((icon, index) => (
+            <button
+              key={index}
+              className="p-4 bg-secondary rounded-xl border border-secondary flex flex-col justify-center items-center hover:inner-border-2 focus:inner-border-2"
+              onClick={() =>
+                toggleSelection(
+                  icon.name,
+                  icon.id,
+                  icon.svg,
+                  icon.srcDark,
+                  icon.srcLight
+                )
+              }
+              style={{ minWidth: "8rem", minHeight: "8rem" }}
+            >
+              <div className="w-[75px] h-[75px]">
+                <div dangerouslySetInnerHTML={{ __html: icon.svg }} />
+              </div>
+              {/* <Image src={icon.src} width={75} height={75} alt={icon.name} /> */}
+              <small className="text-center">{icon.name}</small>
+            </button>
+          ))}
+        </div>
       </div>
 
       <Toaster />
