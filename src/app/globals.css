@@ -64,6 +64,10 @@
   fill: #ffffff!important; /* Change this to the desired fill color */
 }
 
+.custom-svg-no-stroke {
+  stroke:#fff;stroke-linecap:round;
+}
+
 .custom-svg-new {
   stroke:#fff;stroke-linecap:round;stroke-miterlimit:10;stroke-width:20px;
 }

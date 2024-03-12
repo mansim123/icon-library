@@ -45,10 +45,13 @@ export default function Icons() {
   const changeSVGColor = (color: string) => {
     const styleElement = document.createElement("style");
     const styleElement2 = document.createElement("style");
+    const styleElement3 = document.createElement("style");
     styleElement.innerHTML = `.custom-svg { fill: ${color} !important; stroke: ${color} !important;  }`;
     styleElement2.innerHTML = `.custom-svg-new { fill: ${color} !important; stroke: ${color} !important;  }`;
+    styleElement3.innerHTML = `.custom-svg-no-stroke { fill: ${color} !important; stroke: ${color} !important;  }`;
     document.head.appendChild(styleElement);
     document.head.appendChild(styleElement2);
+    document.head.appendChild(styleElement3);
   };
 
   useEffect(() => {

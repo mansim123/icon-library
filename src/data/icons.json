@@ -1,30 +1,39 @@
 [
   {
-    "name": "Burger Menu Circle Outlined",
-    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "outlined",
-    "shape": "circle",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><defs></defs><path d=\"M80 82.5h40a2.5 2.5 0 0 0 0-5H80a2.5 2.5 0 0 0 0 5M80 122.5h40a2.5 2.5 0 0 0 0-5H80a2.5 2.5 0 0 0 0 5M80 102.5h40a2.5 2.5 0 0 0 0-5H80a2.5 2.5 0 0 0 0 5\" class=\"custom-svg\"/><path d=\"M100 55c24.81 0 45 20.19 45 45s-20.19 45-45 45-45-20.19-45-45 20.19-45 45-45m0-5c-27.61 0-50 22.39-50 50s22.39 50 50 50 50-22.39 50-50-22.39-50-50-50Z\" class=\"custom-svg\"/></svg>",
-    "id": 1
-  },
-  {
-    "name": "Burger Menu Circle Filled",
-    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Circle_Outlined.svg",
-    "category": "filled",
-    "shape": "circle",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 200 200\"><path d=\"M100 50c-27.61 0-50 22.39-50 50s22.39 50 50 50 50-22.39 50-50-22.39-50-50-50Zm20 72.5H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Zm0-20H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Zm0-20H80a2.5 2.5 0 0 1 0-5h40a2.5 2.5 0 0 1 0 5Z\" style=\"fill: #010326; stroke-width: 0;\" class=\"custom-svg\" /></svg>",
-    "id": 2
-  },
-  {
     "name": "Burger Menu Misc Hamburger",
     "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Hamburger.svg",
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Hamburger.svg",
     "category": "misc",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M1 1h10M1 5h10M1 9h10\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><line class=\"custom-svg-new\" x1=\"50.67\" y1=\"70\" x2=\"190\" y2=\"70\"/><line class=\"custom-svg-new\" x1=\"50.67\" y1=\"120.01\" x2=\"190\" y2=\"120.01\"/><line class=\"custom-svg-new\" x1=\"50.67\" y1=\"170\" x2=\"190\" y2=\"170\"/></svg>",
+    "id": 1
+  },
+  {
+    "name": "Burger Menu Misc Chocolate",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Chocolate.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Chocolate.svg",
+    "category": "misc",
+    "shape": "misc",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect x=\"60.06\" y=\"60.06\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"60\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"60\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"60\" y=\"110\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"110\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"110\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"60\" y=\"160\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"160\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"160\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/></svg>",
+    "id": 2
+  },
+  {
+    "name": "Burger Menu Misc Donar",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Donar.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Donar.svg",
+    "category": "misc",
+    "shape": "misc",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect class=\"custom-svg-no-stroke\" x=\"60\" y=\"110\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"110\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"110\" width=\"20\" height=\"20\"/></svg>",
     "id": 3
+  },
+  {
+    "name": "Burger Menu Misc Kebab",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Kebab.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Kebab.svg",
+    "category": "misc",
+    "shape": "misc",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"60\" width=\"20\" height=\"20\" transform=\"translate(190 -50) rotate(90)\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"110\" width=\"20\" height=\"20\" transform=\"translate(240 0) rotate(90)\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"160\" width=\"20\" height=\"20\" transform=\"translate(290 50) rotate(90)\"/></svg>",
+    "id": 4
   },
   {
     "name": "Burger Menu Misc Strawberry",
@@ -32,8 +41,8 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Strawberry.svg",
     "category": "misc",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M1 1h12M3 5h8M5 9h4\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
-    "id": 4
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><line class=\"custom-svg-new\" x1=\"50\" y1=\"70\" x2=\"190\" y2=\"70\"/><line class=\"custom-svg-new\" x1=\"80\" y1=\"120.01\" x2=\"160\" y2=\"120.01\"/><line class=\"custom-svg-new\" x1=\"100\" y1=\"170\" x2=\"140\" y2=\"170\"/></svg>",
+    "id": 5
   },
   {
     "name": "Burger Menu Misc Veggy",
@@ -41,52 +50,7 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Veggy.svg",
     "category": "misc",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:35% 25% 25% 25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M1 1H13 M1 6H13\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
-    "id": 5
-  },
-  {
-    "name": "Burger Menu Misc Stairs",
-    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Stairs.svg",
-    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Stairs.svg",
-    "category": "misc",
-    "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M6 1H12 M3 5H9 M1 9H7\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
+    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><line class=\"custom-svg-new\" x1=\"50.33\" y1=\"90.33\" x2=\"190\" y2=\"90.33\"/><line class=\"custom-svg-new\" x1=\"50.33\" y1=\"150\" x2=\"190\" y2=\"150\"/></svg>",
     "id": 6
-  },
-  {
-    "name": "Burger Menu Misc Hot Dog",
-    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Hotdog.svg",
-    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Hotdog.svg",
-    "category": "misc",
-    "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M3 1H9 M1 5H11 M3 9H9\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
-    "id": 7
-  },
-  {
-    "name": "Burger Menu Misc Slides",
-    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Slides.svg",
-    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Slides.svg",
-    "category": "misc",
-    "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M1 1H7 M1 5H11 M1 9H7\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
-    "id": 8
-  },
-  {
-    "name": "Burger Menu Misc Fries",
-    "srcLight": "/icons/SVG/Dark/Icons_ES_Burger_Menu_Misc_Fries.svg",
-    "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Fries.svg",
-    "category": "misc",
-    "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"#cccccc\" style=\"padding:25%\" viewBox=\"0 0 12 10\"><path stroke=\"#000\" strokeLinecap=\"round\" strokeWidth=\"2\" d=\"M1 1H11 M1 9H11 M1 5H7\" style=\"fill: #010326;\" class=\"custom-svg\"/></svg>",
-    "id": 9
-  },
-  {
-    "name": "Testing new logo",
-    "srcLight": "/icons/SVG/Dark/Icons_ES_Test.svg",
-    "srcDark": "/icons/SVG/Light/Icons_ES_Test.svg",
-    "category": "misc",
-    "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs><style>.cls-1{}</style></defs><path d=\"M50.67 70h139.33M50.67 120.01h139.33M50.67 170h139.33\" class=\"custom-svg-new\"/></svg>",
-    "id": 10
   }
 ]

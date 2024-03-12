@@ -1,5 +1,1 @@
-<svg width="100" height="100" viewBox="0 0 2 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="2" width="2" height="2" transform="rotate(90 2 0)" fill="black"/>
-<rect x="2" y="6" width="2" height="2" transform="rotate(90 2 6)" fill="black"/>
-<rect x="2" y="12" width="2" height="2" transform="rotate(90 2 12)" fill="black"/>
-</svg>
+<?xml version="1.0" encoding="UTF-8"?><svg id="Icons" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240"><defs><style>.cls-1{fill:#fff;stroke-width:0px;}</style></defs><rect class="cls-1" x="110" y="60" width="20" height="20" transform="translate(190 -50) rotate(90)"/><rect class="cls-1" x="110" y="110" width="20" height="20" transform="translate(240 0) rotate(90)"/><rect class="cls-1" x="110" y="160" width="20" height="20" transform="translate(290 50) rotate(90)"/></svg>
