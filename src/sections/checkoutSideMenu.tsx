@@ -5,8 +5,8 @@ import { useAppSelector } from "@/redux/store";
 import { AppDispatch } from "@/redux/store";
 import { CheckoutToggle } from "@/redux/features/checkout-slice";
 import { useDispatch } from "react-redux";
-import { useEffect, useState } from "react";
 import ZipDownloadComponent, { ZipDownloadRef } from "@/lib/zipDownload";
+import Image from "next/image";
 
 interface Icon {
   name: string;
@@ -70,12 +70,25 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
         </div>
         <div className="border-t py-2 border-gray-200 dark:border-gray-800 overflow-auto grid gap-px">
           {/* Map over svgPaths and render icons */}
-          {svgPaths.map(({ name, id, svg }) => (
+          {svgPaths.map(({ name, id, svg, srcLight, srcDark  }) => (
             <div key={id} className="p-4 flex items-center justify-between">
               {/* Assuming src contains the path to the SVG */}
 
               <div className="w-12 h-12">
-              <div dangerouslySetInnerHTML={{ __html: svg }} />
+              <Image
+                  className="inline-block dark:hidden"
+                  src={srcLight}
+                  width={75}
+                  height={75}
+                  alt={name}
+                />
+                <Image
+                  className="hidden dark:inline-block"
+                  src={srcDark}
+                  width={75}
+                  height={75}
+                  alt={name}
+                />
             </div>
               {/* Display name as icon name */}
               <small>{name}</small>

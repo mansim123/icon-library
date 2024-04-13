@@ -13,6 +13,7 @@ import { useTheme } from "next-themes";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Toaster, toast } from "sonner";
 import { CheckoutSide } from "@/sections/checkoutSideMenu";
+import Image from "next/image";
 
 interface Icon {
   name: string;
@@ -42,21 +43,21 @@ export default function Icons() {
     dispatch(CheckoutNumber(checkoutNumber));
   }, [checkoutNumber, dispatch]);
 
-  const changeSVGColor = (color: string) => {
-    const styleElement = document.createElement("style");
-    const styleElement2 = document.createElement("style");
-    const styleElement3 = document.createElement("style");
-    styleElement.innerHTML = `.custom-svg { fill: ${color} !important; stroke: ${color} !important;  }`;
-    styleElement2.innerHTML = `.custom-svg-new { fill: ${color} !important; stroke: ${color} !important;  }`;
-    styleElement3.innerHTML = `.custom-svg-no-stroke { fill: ${color} !important; stroke: ${color} !important;  }`;
-    document.head.appendChild(styleElement);
-    document.head.appendChild(styleElement2);
-    document.head.appendChild(styleElement3);
-  };
+  // const changeSVGColor = (color: string) => {
+  //   const styleElement = document.createElement("style");
+  //   const styleElement2 = document.createElement("style");
+  //   const styleElement3 = document.createElement("style");
+  //   styleElement.innerHTML = `.custom-svg { fill: ${color} !important; stroke: ${color} !important;  }`;
+  //   styleElement2.innerHTML = `.custom-svg-new { fill: ${color} !important; stroke: ${color} !important;  }`;
+  //   styleElement3.innerHTML = `.custom-svg-no-stroke { fill: ${color} !important; stroke: ${color} !important;  }`;
+  //   document.head.appendChild(styleElement);
+  //   document.head.appendChild(styleElement2);
+  //   document.head.appendChild(styleElement3);
+  // };
 
   useEffect(() => {
-    const color = theme === "dark" ? "#ffffff" : "#000000";
-    changeSVGColor(color);
+    //const color = theme === "dark" ? "#ffffff" : "#000000";
+    // changeSVGColor(color);
 
     const timeoutId = setTimeout(() => {
       setAnimationCode("transition duration-200 opacity-1");
@@ -232,7 +233,21 @@ export default function Icons() {
               style={{ minWidth: "8rem", minHeight: "8rem" }}
             >
               <div className="w-[75px] h-[75px]">
-                <div dangerouslySetInnerHTML={{ __html: icon.svg }} />
+                {/* <div dangerouslySetInnerHTML={{ __html: icon.svg }} /> */}
+                <Image
+                  className="inline-block dark:hidden"
+                  src={icon.srcDark}
+                  width={75}
+                  height={75}
+                  alt={icon.name}
+                />
+                <Image
+                  className="hidden dark:inline-block"
+                  src={icon.srcLight}
+                  width={75}
+                  height={75}
+                  alt={icon.name}
+                />
               </div>
               {/* <Image src={icon.src} width={75} height={75} alt={icon.name} /> */}
               <small className="text-center">{icon.name}</small>

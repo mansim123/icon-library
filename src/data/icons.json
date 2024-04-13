@@ -5,7 +5,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_Android_Phone.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M150,40h-60c-11.05,0-20,8.95-20,20v120c0,11.05,8.95,20,20,20h60c11.05,0,20-8.95,20-20V60c0-11.05-8.95-20-20-20ZM160,180c0,5.51-4.49,10-10,10h-60c-5.51,0-10-4.49-10-10v-10h80v10ZM160,160h-80V60c0-5.51,4.49-10,10-10h60c5.51,0,10,4.49,10,10v100Z\"/><circle class=\"custom-svg\" cx=\"120\" cy=\"60\" r=\"5\"/></svg>",
     "id": 1
   },
   {
@@ -14,7 +13,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_Browser.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M200,40.17H40c-11.05,0-20,8.95-20,20v119.83c0,11.05,8.95,20,20,20h160c11.05,0,20-8.95,20-20V60.17c0-11.05-8.95-20-20-20ZM210,180c0,5.51-4.49,10-10,10H40c-5.51,0-10-4.49-10-10v-89.94h180v89.94ZM210,80.06H30v-19.89c0-5.51,4.49-10,10-10h160c5.51,0,10,4.49,10,10v19.89Z\"/><circle class=\"custom-svg\" cx=\"45\" cy=\"65.61\" r=\"5\"/><circle class=\"custom-svg\" cx=\"60\" cy=\"65.61\" r=\"5\"/><circle class=\"custom-svg\" cx=\"75\" cy=\"65.61\" r=\"5\"/></svg>",
     "id": 2
   },
   {
@@ -23,7 +21,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_Bird_House.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M120,40L40,120h30l10,80h80l10.01-80h29.99L120,40ZM161.19,110l-1.1,8.76-8.92,71.24h-62.35l-8.9-71.24-1.09-8.76h-14.69l55.86-55.86,55.85,55.86h-14.67Z\"/><path class=\"custom-svg\" d=\"M120,110.67c-5.88,0-11.24,2.4-15.09,6.25-3.85,3.84-6.25,9.21-6.25,15.09,0,5.88,2.4,11.24,6.25,15.08,3.84,3.85,9.21,6.25,15.09,6.25,5.88,0,11.24-2.4,15.08-6.25,3.85-3.85,6.25-9.21,6.25-15.08,0-5.88-2.4-11.24-6.25-15.09-3.85-3.85-9.21-6.25-15.08-6.25ZM128.01,140.01c-2.07,2.06-4.87,3.32-8.01,3.32-3.15,0-5.95-1.26-8.01-3.32-2.06-2.07-3.32-4.87-3.32-8.01,0-3.15,1.26-5.95,3.32-8.01,2.07-2.06,4.87-3.32,8.01-3.32,3.15,0,5.95,1.26,8.01,3.32,2.06,2.07,3.32,4.87,3.32,8.01,0,3.15-1.26,5.95-3.32,8.01Z\"/></svg>",
     "id": 3
   },
   {
@@ -32,7 +29,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_Home.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M120,54.2l55.99,56.45h-6.16v79.35h-30.33v-53.35h-39.5v53.33l-30,.04v-79.35h-6l56-56.47M120,40L40,120.67h20v79.36l50-.06v-53.32h19.5v53.35h50.33v-79.35h20.17L120,40h0Z\"/></svg>",
     "id": 4
   },
   {
@@ -41,7 +37,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Hamburger.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><line class=\"custom-svg-new\" x1=\"50.67\" y1=\"70\" x2=\"190\" y2=\"70\"/><line class=\"custom-svg-new\" x1=\"50.67\" y1=\"120.01\" x2=\"190\" y2=\"120.01\"/><line class=\"custom-svg-new\" x1=\"50.67\" y1=\"170\" x2=\"190\" y2=\"170\"/></svg>",
     "id": 5
   },
   {
@@ -50,7 +45,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Outlined_Hamburger.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M50.33,80h139.33c5.52,0,10-4.48,10-10s-4.48-10-10-10H50.33c-5.52,0-10,4.48-10,10s4.48,10,10,10ZM50.33,65h139.33c2.76,0,5,2.24,5,5s-2.24,5-5,5H50.33c-2.76,0-5-2.24-5-5s2.24-5,5-5Z\"/><path class=\"custom-svg\" d=\"M189.67,110.01H50.33c-5.52,0-10,4.48-10,10s4.48,10,10,10h139.33c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM189.67,125.01H50.33c-2.76,0-5-2.24-5-5s2.24-5,5-5h139.33c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/><path class=\"custom-svg\" d=\"M189.67,160H50.33c-5.52,0-10,4.48-10,10s4.48,10,10,10h139.33c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM189.67,175H50.33c-2.76,0-5-2.24-5-5s2.24-5,5-5h139.33c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/></svg>",
     "id": 6
   },
   {
@@ -59,7 +53,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Chocolate.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect x=\"60.06\" y=\"60.06\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"60\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"60\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"60\" y=\"110\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"110\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"110\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"60\" y=\"160\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"160\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"160\" width=\"20\" height=\"20\" class=\"custom-svg-no-stroke\"/></svg>",
     "id": 7
   },
   {
@@ -68,7 +61,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Candy_Box.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect class=\"custom-svg\" x=\"60.06\" y=\"60.06\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"110\" y=\"60\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"160\" y=\"60\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"60\" y=\"110\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"110\" y=\"110\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"160\" y=\"110\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"60\" y=\"160\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"110\" y=\"160\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/><rect class=\"custom-svg\" x=\"160\" y=\"160\" width=\"20\" height=\"20\" rx=\"10\" ry=\"10\"/></svg>",
     "id": 8
   },
   {
@@ -77,7 +69,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Donar.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect class=\"custom-svg-no-stroke\" x=\"60\" y=\"110\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"110\" width=\"20\" height=\"20\"/><rect class=\"custom-svg-no-stroke\" x=\"160\" y=\"110\" width=\"20\" height=\"20\"/></svg>",
     "id": 9
   },
   {
@@ -86,7 +77,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Kebab.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"60\" width=\"20\" height=\"20\" transform=\"translate(190 -50) rotate(90)\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"110\" width=\"20\" height=\"20\" transform=\"translate(240 0) rotate(90)\"/><rect class=\"custom-svg-no-stroke\" x=\"110\" y=\"160\" width=\"20\" height=\"20\" transform=\"translate(290 50) rotate(90)\"/></svg>",
     "id": 10
   },
   {
@@ -95,7 +85,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Strawberry.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><line class=\"custom-svg-new\" x1=\"50\" y1=\"70\" x2=\"190\" y2=\"70\"/><line class=\"custom-svg-new\" x1=\"80\" y1=\"120.01\" x2=\"160\" y2=\"120.01\"/><line class=\"custom-svg-new\" x1=\"100\" y1=\"170\" x2=\"140\" y2=\"170\"/></svg>",
     "id": 11
   },
   {
@@ -104,7 +93,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Outlined_Strawberry.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M190,60H50c-5.52,0-10,4.48-10,10s4.48,10,10,10h140c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM190,75H50c-2.76,0-5-2.24-5-5s2.24-5,5-5h140c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/><path class=\"custom-svg\" d=\"M160,110.01h-80c-5.52,0-10,4.48-10,10s4.48,10,10,10h80c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM160,125.01h-80c-2.76,0-5-2.24-5-5s2.24-5,5-5h80c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/><path class=\"custom-svg\" d=\"M140,160h-40c-5.52,0-10,4.48-10,10s4.48,10,10,10h40c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM140,175h-40c-2.76,0-5-2.24-5-5s2.24-5,5-5h40c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/></svg>",
     "id": 12
   },
   {
@@ -113,8 +101,7 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Veggy.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><line class=\"custom-svg-new\" x1=\"50.33\" y1=\"90.33\" x2=\"190\" y2=\"90.33\"/><line class=\"custom-svg-new\" x1=\"50.33\" y1=\"150\" x2=\"190\" y2=\"150\"/></svg>",
-    "id": 13
+   "id": 13
   },
 
   {
@@ -123,7 +110,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Outlined_Veggy.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M50.33,100.33h139.67c5.52,0,10-4.48,10-10s-4.48-10-10-10H50.33c-5.52,0-10,4.48-10,10s4.48,10,10,10ZM50.33,85.33h139.67c2.76,0,5,2.24,5,5s-2.24,5-5,5H50.33c-2.76,0-5-2.24-5-5s2.24-5,5-5Z\"/><path class=\"custom-svg\" d=\"M190,140H50.33c-5.52,0-10,4.48-10,10s4.48,10,10,10h139.67c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM190,155H50.33c-2.76,0-5-2.24-5-5s2.24-5,5-5h139.67c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/></svg>",
     "id": 14
   },
   {
@@ -132,7 +118,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Fries_Left.svg",
     "category": "misc",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect class=\"custom-svg\" x=\"20\" y=\"115\" width=\"100\" height=\"10\"/><rect class=\"custom-svg\" x=\"20\" y=\"169.78\" width=\"200\" height=\"10\"/><rect class=\"custom-svg\" x=\"20\" y=\"60\" width=\"200\" height=\"10\"/></svg>",
     "id": 15
   },
   {
@@ -141,7 +126,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Fries_Right.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs><style>.cls-1{fill:#000;stroke-width:0px;}</style></defs><rect class=\"custom-svg\" x=\"120\" y=\"115\" width=\"100\" height=\"10\"/><rect class=\"custom-svg\" x=\"20\" y=\"169.78\" width=\"200\" height=\"10\"/><rect class=\"custom-svg\" x=\"20\" y=\"60\" width=\"200\" height=\"10\"/></svg>",
     "id": 16
   },
   {
@@ -150,7 +134,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Misc_Stairs_Right.svg",
     "category": "filled",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><rect class=\"custom-svg\" x=\"70.02\" y=\"115\" width=\"100\" height=\"10\"/><rect class=\"custom-svg\" x=\"20.02\" y=\"169.78\" width=\"100\" height=\"10\"/><rect class=\"custom-svg\" x=\"119.98\" y=\"60\" width=\"100\" height=\"10\"/></svg>",
     "id": 17
   },
   {
@@ -159,7 +142,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Burger_Menu_Outlines_Stairs_Right.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M130.05,159.97H50.05c-5.52,0-10,4.48-10,10s4.48,10,10,10h80c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM130.05,174.97H50.05c-2.76,0-5-2.24-5-5s2.24-5,5-5h80c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/><path class=\"custom-svg\" d=\"M160,110h-80c-5.52,0-10,4.48-10,10s4.48,10,10,10h80c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM160,125h-80c-2.76,0-5-2.24-5-5s2.24-5,5-5h80c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/><path class=\"custom-svg\" d=\"M189.93,60.03h-80c-5.52,0-10,4.48-10,10s4.48,10,10,10h80c5.52,0,10-4.48,10-10s-4.48-10-10-10ZM189.93,75.03h-80c-2.76,0-5-2.24-5-5s2.24-5,5-5h80c2.76,0,5,2.24,5,5s-2.24,5-5,5Z\"/></svg>",
     "id": 18
   },
   {
@@ -168,7 +150,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_iMac.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M180,40.17H60c-11.05,0-20,8.95-20,20v89.83c0,11.05,8.95,20,20,20h30v20.08h-10v10h80v-10h-10v-20.08h30c11.05,0,20-8.95,20-20V60.17c0-11.05-8.95-20-20-20ZM60,50.17h120c5.51,0,10,4.49,10,10v70.46H50V60.17c0-5.51,4.49-10,10-10ZM140,190h-40v-20h40v20ZM180,160H60c-5.51,0-10-4.49-10-10v-9.37h140v9.37c0,5.51-4.49,10-10,10Z\"/><circle class=\"custom-svg\" cx=\"120\" cy=\"65\" r=\"5\"/></svg>",
     "id": 19
   },
   {
@@ -177,7 +158,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_iOS_Phone.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M150,40h-60c-11.05,0-20,8.95-20,20v120c0,11.05,8.95,20,20,20h60c11.05,0,20-8.95,20-20V60c0-11.05-8.95-20-20-20ZM160,180c0,5.51-4.49,10-10,10h-60c-5.51,0-10-4.49-10-10V60c0-5.51,4.49-10,10-10h11.67v10h36.67v-10h11.67c5.51,0,10,4.49,10,10v120Z\"/><circle class=\"custom-svg\" cx=\"120\" cy=\"175\" r=\"5\"/></svg>",
     "id": 20
   },
   {
@@ -186,7 +166,6 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_Layout.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M43.94,129.97h62c2.21,0,4-1.79,4-4V44.17c0-2.21-1.79-4-4-4h-62c-2.21,0-4,1.79-4,4v81.8c0,2.21,1.79,4,4,4ZM49.94,50.17h50v69.8h-50V50.17Z\"/><path class=\"custom-svg\" d=\"M106,150h-62c-2.21,0-4,1.79-4,4v42c0,2.21,1.79,4,4,4h62c2.21,0,4-1.79,4-4v-42c0-2.21-1.79-4-4-4ZM100,190h-50v-30h50v30Z\"/><path class=\"custom-svg\" d=\"M196,110.2h-62c-2.21,0-4,1.79-4,4v81.8c0,2.21,1.79,4,4,4h62c2.21,0,4-1.79,4-4v-81.8c0-2.21-1.79-4-4-4ZM190,190h-50v-69.8h50v69.8Z\"/><path class=\"custom-svg\" d=\"M196,40h-62c-2.21,0-4,1.79-4,4v42c0,2.21,1.79,4,4,4h62c2.21,0,4-1.79,4-4v-42c0-2.21-1.79-4-4-4ZM190,80h-50v-30h50v30Z\"/></svg>",
     "id": 21
   },
   {
@@ -195,7 +174,142 @@
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_Shrine.svg",
     "category": "outlined",
     "shape": "misc",
-    "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 240 240\"><defs></defs><path class=\"custom-svg\" d=\"M119.22,55.38c5.02,6.27,12.29,14.88,20.77,23.57,14.28,14.6,27.42,24.67,39.3,30.13-1.99,1.79-4.05,3.61-5.99,5.31l-3.41,2.99v72.58h-24.45v-69.85h-51.04v69.88l-24.28.03v-72.88l-3.71-3c-2.41-1.95-5.01-4.12-7.43-6.2,8.28-4.85,19.69-13.49,36-28.67,9.55-8.89,18.26-17.69,24.25-23.89M120,40s-58.75,63.91-78.55,63.91c-3.57,0,18.65,18,18.65,18v78.13l44.28-.06v-69.87h31.04v69.85h44.45v-78.05s20.52-18,19.03-18c-32.86,0-78.91-63.91-78.91-63.91h0Z\"/></svg>",
     "id": 22
+  },
+  {
+    "name": "Buzzfeed Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Buzzfeed.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Buzzfeed.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 23
+  },
+  {
+    "name": "Facebook Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Facebook.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Facebook.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 24
+  },
+  {
+    "name": "File Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_File.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_File.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 25
+  },
+  {
+    "name": "Heart Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Health.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Health.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 26
+  },
+  {
+    "name": "iMessage Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_iMessage.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_iMessage.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 27
+  },
+  {
+    "name": "List Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_List.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_List.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 28
+  },
+  {
+    "name": "Location Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Location.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Location.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 29
+  },
+  {
+    "name": "Map Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Map.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Map.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 30
+  },
+  {
+    "name": "Music Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Music.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Music.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 31
+  },
+  {
+    "name": "Netflix Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Netflix.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Netflix.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 32
+  },
+  {
+    "name": "Notes Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Notes.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Notes.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 33
+  },
+  {
+    "name": "Notion Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Notion.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Notion.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 34
+  },
+  {
+    "name": "Phone Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Phone.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Phone.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 35
+  },
+  {
+    "name": "Photo Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Photo.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Photo.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 36
+  },
+  {
+    "name": "User Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_User.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_User.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 37
+  },
+  {
+    "name": "Video Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_Video.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_Video.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 38
+  },
+  {
+    "name": "Youtube Filled",
+    "srcLight": "/icons/SVG/Dark/Icons_ES_YouTube.svg",
+    "srcDark": "/icons/SVG/Light/Icons_ES_YouTube.svg",
+    "category": "filled",
+    "shape": "misc",
+    "id": 39
   }
 ]
