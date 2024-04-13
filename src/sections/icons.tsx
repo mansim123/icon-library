@@ -20,7 +20,6 @@ interface Icon {
   srcLight: string;
   srcDark: string;
   id: number;
-  svg: string;
 }
 
 export default function Icons() {
@@ -71,7 +70,6 @@ export default function Icons() {
   function toggleSelection(
     name: string,
     id: number,
-    svg: string,
     srcLight: string,
     srcDark: string
   ) {
@@ -96,7 +94,7 @@ export default function Icons() {
     // Update svgPaths state by adding the new item
     setSvgPaths((prevState) => [
       ...prevState,
-      { name, id, svg, srcLight, srcDark },
+      { name, id, srcLight, srcDark },
     ]);
 
     // Increment checkoutNumber
@@ -225,7 +223,6 @@ export default function Icons() {
                 toggleSelection(
                   icon.name,
                   icon.id,
-                  icon.svg,
                   icon.srcDark,
                   icon.srcLight
                 )
