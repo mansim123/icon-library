@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, ChangeEvent, useEffect } from "react";
 import { Input } from "@/components/ui/input";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
@@ -22,40 +22,61 @@ export default function Search() {
     dispatch(Searching(searchName));
   }, [searchName, dispatch]);
 
-  const { setTheme } = useTheme()
+  const { setTheme } = useTheme();
   const [whichMode, setWhichMode] = useState("light");
-  setTheme(whichMode)
+  setTheme(whichMode);
 
-  const onDarkModeToggle = (value:string) => {
-    setWhichMode(value)
-    setTheme(whichMode)
-  }
+  const onDarkModeToggle = (value: string) => {
+    setWhichMode(value);
+    setTheme(whichMode);
+  };
 
   return (
-    <section className="pb-6 px-6 bg-secondary w-full flex items-center justify-center flex-col">
-      <h1 className="text-[26px] pb-4 font-roboto-light text-center">Welcome to ShinkōLabs. Select your icons, download them, have fun creating.</h1>
-      <div className="flex w-full max-w-[50rem] rounded-sm overflow-hidden">
-        <button className="flex bg-primary-foreground  items-center px-3 text-sm">
-          <MagnifyingGlassIcon />
-        </button>
-        <Input
-          onChange={handleInputChange}
-          className="w-full font-roboto-light !ring-0 !ring-offset-0 rounded-none border-none"
-          placeholder="Search all the icons we have in our database"
-          type="search"
-        />
-      </div>
-      <p className="py-6 text-[18px] text-center font-roboto-light">
-      Over 1000 icons created in various styles (pixel, line, filled and hand Drawn) This is to give user<br className="hidden xl:block"></br> a diverse range of style they can use these for. 
+    <section className="py-6 px-6 bg-secondary w-full flex items-center justify-center flex-col">
+      <h2 className="text-[0.9rem] pb-1 inter font-bold text-center text-[#596DED] tracking-[0.4rem] uppercase">
+        <span className="text-[#5B5B5B]">Welcome to</span> SHINKō LABS?
+      </h2>
+      <h1 className="text-[1.6rem] inter font-bold text-center text-[#000000]">
+        Unleash Your Creativity: 1,000+ Professionally Designed<br></br> Icons
+        for UI and Game Design.{" "}
+      </h1>
+      <p className="py-6 text-[1rem] text-center poppins font-light max-w-[900px]">
+        Elevate your designs with our curated library of handcrafted icons.
+        <br></br>
+        Choose from a diverse range of styles, from pixel perfect hand-drawn
+        options to suit any UI or Game Design.<br></br>
+        Find the perfect icon to match your vision, straight from Shinko Lab.
       </p>
-      <Tabs defaultValue="light" value={whichMode} onValueChange={onDarkModeToggle} className="py-">
-        <TabsList>
-          <TabsTrigger value="light">Light Mode</TabsTrigger>
-          <TabsTrigger value="dark">Dark Mode</TabsTrigger>
-        </TabsList>
-      </Tabs>
+      <h2 className="text-[0.9rem] pb-1 inter font-bold text-center text-[#596DED] tracking-[0.4rem] uppercase">
+        <span className="text-[#000000]">Try some now</span> for free!
+      </h2>
+      <div className="px-10 min-w-[700px] bg-white rounded-[1rem] flex items-center gap-2 mt-4">
+        <div className="flex w-full rounded-xl justify-center items-center py-0 overflow-hidden border-[1px] border-[#CBCBCB]">
+          <button className="flex items-center px-3 text-sm">
+            <MagnifyingGlassIcon />
+          </button>
+          <Input
+            onChange={handleInputChange}
+            className="w-full inter font-light !ring-0 !ring-offset-0 rounded-none border-none"
+            placeholder="Search icons..."
+            type="search"
+          />
+        </div>
+        <div>
+          <Tabs
+            defaultValue="light"
+            value={whichMode}
+            onValueChange={onDarkModeToggle}
+            className="py-4 rounded-xl"
+          >
+            <TabsList className="rounded-xl">
+              <TabsTrigger className="rounded-xl" value="light">Light Mode</TabsTrigger>
+              <TabsTrigger className="rounded-xl" value="dark">Dark Mode</TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+      </div>
       {/* <ModeToggle /> */}
     </section>
   );
 }
-

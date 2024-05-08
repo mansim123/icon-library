@@ -1,5 +1,13 @@
 [
   {
+    "name": "test",
+    "srcLight": "/icons/SVG/Hamburger.svg",
+    "srcDark": "/icons/SVG/Hamburger.svg",
+    "category": "outlined",
+    "shape": "misc",
+    "id": 0
+  },
+  {
     "name": "Andriod Phone Outlined",
     "srcLight": "/icons/SVG/Dark/Icons_ES_Outlined_Android_Phone.svg",
     "srcDark": "/icons/SVG/Light/Icons_ES_Outlined_Android_Phone.svg",
