@@ -14,6 +14,50 @@ import { Toaster, toast } from "sonner";
 import { CheckoutSide } from "@/sections/checkoutSideMenu";
 import Image from "next/image";
 
+interface IconData {
+  id: number;
+  attributes: {
+    Icon_Description: string;
+    Dark_Icon: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Light_Icon: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Dark_Icon_Png: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Light_Icon_Png: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Icon_Pack: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Shape: string;
+    Style: string;
+  };
+}
+
 
 // Define a TypeScript interface for the icon data
 interface Icon {
@@ -53,15 +97,15 @@ useEffect(() => {
       const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/icons-mains?populate=*`);
       const json = await res.json();
       if (Array.isArray(json.data) && json.data.length > 0) {
-        const transformedData = json.data.map(item => ({
+        const transformedData = json.data.map((item: IconData) => ({
           name: item.attributes.Icon_Description,
           srcDark: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Dark_Icon.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Dark_Icon.data.attributes.url}`,
           srcLight: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Light_Icon.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Light_Icon.data.attributes.url}`,
           srcDarkPng: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Dark_Icon_Png.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Dark_Icon_Png.data.attributes.url}`,
           srcLightPng: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Light_Icon_Png.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Light_Icon_Png.data.attributes.url}`,
           iconPack: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Icon_Pack.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Icon_Pack.data.attributes.url}`,
-          category: item.attributes.Shape, // Use Shape attribute as category
-          style: item.attributes.Style, // Use Style attribute for shape matching in filter
+          category: item.attributes.Shape,
+          style: item.attributes.Style,
           id: item.id
         }));
         setIconPosts(transformedData);
