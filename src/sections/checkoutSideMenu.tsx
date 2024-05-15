@@ -11,6 +11,9 @@ import Image from "next/image";
 interface Icon {
   name: string;
   srcDark: string;
+  srcDarkPng:string;
+  srcLightPng:string;
+  iconPack:string;
   srcLight: string;
   id: number;
 }
@@ -35,16 +38,29 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
     dispatch(CheckoutToggle());
   }
 
-
   // Inside your CheckoutSide component
   const zipDownloaderRef = useRef<ZipDownloadRef>(null);
 
   // Function to handle download button click
-  const handleDownloadClick = () => {
-    // Call the handleDownload function from the ZipDownloadComponent
-    if (zipDownloaderRef.current) {
-      zipDownloaderRef.current.handleDownload();
+  const handleDownloadClick = (whichDownload:string) => {
+
+    if(whichDownload == "svg") {
+      if (zipDownloaderRef.current) {
+        zipDownloaderRef.current.handleDownloadSvg();
+      }
     }
+    if(whichDownload == "png") {
+      if (zipDownloaderRef.current) {
+        zipDownloaderRef.current.handleDownloadPng();
+      }
+    }
+    if(whichDownload == "zip") {
+      if (zipDownloaderRef.current) {
+        zipDownloaderRef.current.handleDownloadZip();
+      }
+    }
+    // Call the handleDownload function from the ZipDownloadComponent
+    
   };
 
   return (
@@ -102,19 +118,23 @@ export function CheckoutSide({ svgPaths, onRemoveItem }: Props) {
           ))}
         </div>
         <div className="p-4 grid gap-2">
-          <Button className="w-full" variant="outline">
+          <Button
+          onClick={() => handleDownloadClick("png")}
+          className="w-full" variant="outline">
             PNG
-            <span className="text-sm">(24x24)</span>
           </Button>
           {/* Pass svgPaths to ZipDownloadComponent */}
           <ZipDownloadComponent ref={zipDownloaderRef} svgPaths={svgPaths} />
           {/* Button to trigger download */}
           <Button
-            onClick={handleDownloadClick}
+            onClick={() => handleDownloadClick("svg")}
             className="w-full"
             variant="outline"
           >
-            SVG (Original)
+            SVG
+          </Button>
+          <Button onClick={() => handleDownloadClick("zip")} className="w-full" variant="outline">
+            Zip (icon pack)
           </Button>
         </div>
       </div>

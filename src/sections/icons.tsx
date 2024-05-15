@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 // import { useAppSelector } from "@/redux/store";
-import iconsData from "@/data/icons.json";
 import {
   CheckoutNumber,
   CheckoutToggle,
@@ -15,10 +14,17 @@ import { Toaster, toast } from "sonner";
 import { CheckoutSide } from "@/sections/checkoutSideMenu";
 import Image from "next/image";
 
+
+// Define a TypeScript interface for the icon data
 interface Icon {
   name: string;
   srcLight: string;
   srcDark: string;
+  srcLightPng: string;
+  srcDarkPng: string;
+  IconPack:string;
+  category: string;  
+  style: string; 
   id: number;
 }
 
@@ -37,22 +43,48 @@ export default function Icons() {
   const [animationCode, setAnimationCode] = useState("opacity-0");
   const [svgPaths, setSvgPaths] = useState<Icon[]>([]);
 
+
+  const [iconPosts, setIconPosts] = useState([]);
+
+  // Fetch and transform icons data
+useEffect(() => {
+  const fetchIconPosts = async () => {
+    try {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}/api/icons-mains?populate=*`);
+      const json = await res.json();
+      if (Array.isArray(json.data) && json.data.length > 0) {
+        const transformedData = json.data.map(item => ({
+          name: item.attributes.Icon_Description,
+          srcDark: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Dark_Icon.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Dark_Icon.data.attributes.url}`,
+          srcLight: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Light_Icon.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Light_Icon.data.attributes.url}`,
+          srcDarkPng: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Dark_Icon_Png.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Dark_Icon_Png.data.attributes.url}`,
+          srcLightPng: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Light_Icon_Png.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Light_Icon_Png.data.attributes.url}`,
+          iconPack: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Icon_Pack.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Icon_Pack.data.attributes.url}`,
+          category: item.attributes.Shape, // Use Shape attribute as category
+          style: item.attributes.Style, // Use Style attribute for shape matching in filter
+          id: item.id
+        }));
+        setIconPosts(transformedData);
+      }
+      //console.log(json.data);
+    } catch (error) {
+      console.error("Error fetching icon posts:", error);
+    }
+  };
+
+  fetchIconPosts();
+}, []);
+
+  useEffect(() => {
+    if (iconPosts) {
+      console.log(iconPosts);
+    }
+  }, [iconPosts]);
+  
   useEffect(() => {
     // Dispatch the action after the state has been updated
     dispatch(CheckoutNumber(checkoutNumber));
   }, [checkoutNumber, dispatch]);
-
-  // const changeSVGColor = (color: string) => {
-  //   const styleElement = document.createElement("style");
-  //   const styleElement2 = document.createElement("style");
-  //   const styleElement3 = document.createElement("style");
-  //   styleElement.innerHTML = `.custom-svg { fill: ${color} !important; stroke: ${color} !important;  }`;
-  //   styleElement2.innerHTML = `.custom-svg-new { fill: ${color} !important; stroke: ${color} !important;  }`;
-  //   styleElement3.innerHTML = `.custom-svg-no-stroke { fill: ${color} !important; stroke: ${color} !important;  }`;
-  //   document.head.appendChild(styleElement);
-  //   document.head.appendChild(styleElement2);
-  //   document.head.appendChild(styleElement3);
-  // };
 
   useEffect(() => {
     //const color = theme === "dark" ? "#ffffff" : "#000000";
@@ -71,7 +103,10 @@ export default function Icons() {
     name: string,
     id: number,
     srcLight: string,
-    srcDark: string
+    srcDark: string,
+    srcDarkPng: string,
+    srcLightPng: string,
+    iconPack: string,
   ) {
     const exists = svgPaths.some((item) => item.id === id);
 
@@ -94,7 +129,7 @@ export default function Icons() {
     // Update svgPaths state by adding the new item
     setSvgPaths((prevState) => [
       ...prevState,
-      { name, id, srcLight, srcDark },
+      { name, id, srcLight, srcDark, srcDarkPng, srcLightPng, iconPack },
     ]);
 
     // Increment checkoutNumber
@@ -147,23 +182,21 @@ export default function Icons() {
     dispatch(CheckoutToggle());
   };
 
-  const [filteredIcons, setFilteredIcons] = useState<typeof iconsData>([]);
+  const [filteredIcons, setFilteredIcons] = useState([]);
 
   // Filter icons based on category when category changes
   // Filter icons based on category, shape, and searchName
   useEffect(() => {
-    const filtered = iconsData.filter((icon) => {
+    const filtered = iconPosts.filter((icon) => {
       const matchesCategory = category === "all" || icon.category === category;
-      const matchesShape = shape === "all" || icon.shape === shape;
-      const matchesSearch = icon.name
-        .toLowerCase()
-        .includes(searchName.toLowerCase());
-
+      const matchesShape = shape === "all" || icon.style === shape; // Use 'style' property to match 'shape'
+      const matchesSearch = icon.name.toLowerCase().includes(searchName.toLowerCase());
+  
       return matchesCategory && matchesShape && matchesSearch;
     });
-
+  
     setFilteredIcons(filtered);
-  }, [category, shape, searchName]);
+  }, [iconPosts, category, shape, searchName]);
 
   const onCategoryChange = (value: string) => {
     setCategory(value);
@@ -215,7 +248,7 @@ export default function Icons() {
         <div
           className={`grid px-6 grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4 ${animationCode}`}
         >
-          {filteredIcons.map((icon, index) => (
+          {filteredIcons.map((icon:any, index:any) => (
             <button
               key={index}
               className="p-4 bg-secondary rounded-xl border border-secondary flex flex-col justify-center items-center hover:inner-border-2 focus:inner-border-2"
@@ -224,7 +257,11 @@ export default function Icons() {
                   icon.name,
                   icon.id,
                   icon.srcDark,
-                  icon.srcLight
+                  icon.srcLight,
+                  icon.srcLightPng,
+                  icon.srcDarkPng,
+                  icon.iconPack,
+                  
                 )
               }
               style={{ minWidth: "8rem", minHeight: "8rem" }}
