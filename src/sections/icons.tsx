@@ -13,11 +13,41 @@ interface IconData {
   id: number;
   attributes: {
     Icon_Description: string;
-    Dark_Icon_Svg: string;
-    Light_Icon_Svg: string;
-    Dark_Icon_Png: string;
-    Light_Icon_Png: string;
-    Icon_Pack: string;
+    Dark_Icon: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Light_Icon: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Dark_Icon_Png: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Light_Icon_Png: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
+    Icon_Pack: {
+      data: {
+        attributes: {
+          url: string;
+        };
+      };
+    };
     Shape: string;
     Style: string;
   };
@@ -61,11 +91,11 @@ export default function Icons() {
           const transformedData = json.data.map((item: IconData) => ({
             name: item.attributes.Icon_Description,
             id: item.id,
-            srcDark: item.attributes.Dark_Icon_Svg,
-            srcLight: item.attributes.Light_Icon_Svg,
-            srcDarkPng: item.attributes.Dark_Icon_Png,
-            srcLightPng: item.attributes.Light_Icon_Png,
-            iconPack: item.attributes.Icon_Pack,
+            srcDark: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Dark_Icon.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Dark_Icon.data.attributes.url}`,
+            srcLight: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Light_Icon.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Light_Icon.data.attributes.url}`,
+            srcDarkPng: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Dark_Icon_Png.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Dark_Icon_Png.data.attributes.url}`,
+            srcLightPng: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Light_Icon_Png.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Light_Icon_Png.data.attributes.url}`,
+            iconPack: `${process.env.NEXT_PUBLIC_STRAPI_URL}${item.attributes.Icon_Pack.data.attributes.url.startsWith('/') ? '' : '/'}${item.attributes.Icon_Pack.data.attributes.url}`,
             category: item.attributes.Shape,
             style: item.attributes.Style
           }));
@@ -253,23 +283,23 @@ export default function Icons() {
               }
               style={{ minWidth: "8rem", minHeight: "8rem" }}
             >
-              <div className="w-[40px] h-[40px] pt-2">
+              <div className="w-[75px] h-[75px]">
                 <Image
                   className="inline-block dark:hidden"
                   src={icon.srcDark}
-                  width={40}
-                  height={40}
+                  width={75}
+                  height={75}
                   alt={icon.name}
                 />
                 <Image
                   className="hidden dark:inline-block"
                   src={icon.srcLight}
-                  width={40}
-                  height={40}
+                  width={75}
+                  height={75}
                   alt={icon.name}
                 />
               </div>
-              <small className="text-center pt-6">{icon.name}</small>
+              <small className="text-center">{icon.name}</small>
             </button>
           ))}
         </div>
