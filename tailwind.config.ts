@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      boxShadow: {
+        'custom-shadow': '0 4px 6px -1px rgba(89, 109, 237, 0.17), 0 2px 4px -1px rgba(89, 109, 237, 0.02)',
+      },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"], // Common base for both RobotoBold and RobotoLight
         'roboto-bold': ["RobotoBold", "sans-serif"], // Font family for RobotoBold

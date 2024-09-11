@@ -10,11 +10,7 @@ import Image from "next/image";
 
 interface Icon {
   name: string;
-  srcDark: string;
-  srcDarkPng:string;
-  srcLightPng:string;
-  iconPack:string;
-  srcLight: string;
+  svg:string;
   id: number;
 }
 
