@@ -302,12 +302,12 @@ export default function Icons() {
                 <TabsTrigger className={tabCSS} value="solid">
                   Solid
                 </TabsTrigger>
-                <TabsTrigger className={tabCSS} value="dual">
+                {/* <TabsTrigger className={tabCSS} value="dual">
                   Dual
                 </TabsTrigger>
                 <TabsTrigger className={tabCSS} value="2tone">
                   2-Tone
-                </TabsTrigger>
+                </TabsTrigger> */}
                 <TabsTrigger className={tabCSS} value="sharp">
                   Stroke (sharp)
                 </TabsTrigger>

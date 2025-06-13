@@ -58,14 +58,14 @@ export default function Nav() {
 
         <div className="flex-grow flex items-center justify-end md:justify-between gap-4">
           <div className="hidden md:flex flex-col md:flex-row items-center gap-4 lg:gap-8">
-            <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">DOCS</a>
+            {/* <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">DOCS</a>
             <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">components</a>
             <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">ICONS</a>
             <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">themes</a>
             <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">pages</a>
             <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">Mods</a>
             <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">github</a>
-            <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">about</a>
+            <a href="/" className="uppercase inter text-[0.9rem] text-[#3D3D3D] dark:text-[#B0B6BE]">about</a> */}
           </div>
 
           <div className="flex items-center gap-4">
